@@ -1,0 +1,26 @@
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+h2 {
+    width: 250px;
+    font-size: 1.4em;
+    color: #999;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+li {
+    list-style-type:none;
+}
+
+a {
+    width: 100%;
+}

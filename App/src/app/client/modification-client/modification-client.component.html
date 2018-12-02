@@ -1,0 +1,153 @@
+<section class="zIndex0">
+  <h2>Modifier un client</h2>
+  <form #ngForm="ngForm" *ngIf="valeurNgIf < 1; else other_content">
+    <article>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Adresse 1</th>
+            <th>Adresse 2</th>
+            <th>Ville</th>
+            <th>Code Postal</th>
+            <th>Mail</th>
+            <th>Tel</th>
+            <th>Date de naissance</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let customer of customers">
+            <td>{{ customer.id_client }}</td>
+            <td>{{ customer.nom }}</td>
+            <td>{{ customer.prenom }}</td>
+            <td>{{ customer.adresse1 }}</td>
+            <td>{{ customer.adresse2 }}</td>
+            <td>{{ customer.ville }}</td>
+            <td>{{ customer.codePostal }}</td>
+            <td>{{ customer.mail }}</td>
+            <td>{{ customer.tel }}</td>
+            <td>{{ customer.date | slice:0:10}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+    <fieldset *ngIf="customers">
+        <input placeholder="ID du client à modifier" [(ngModel)]="customers.id_client" name="id_client" type="number" id="idClientInput"/>
+        <button mwlConfirmationPopover [popoverTitle]="'Confirmation'" [popoverMessage]="'Êtes-vous sûr?'" placement="top"
+        class="buttonPink" id="btSubmit" (confirm)="choisirId(customers.id_client, data)" title="Sélectionner" type="submit">
+          Valider
+        </button>
+      </fieldset>
+  </form>
+
+    <ng-template #other_content>
+        <form #ngForm="ngForm">
+      <article>
+        <table class="table table-striped">
+          <tbody>
+            <tr *ngFor="let customer of customers">
+              <td class="td">
+                <ul>
+                  <li>ID</li>
+                  <li>{{ customer.id_client }}</li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Nom</li>
+                  <li>
+                    <input type= "text" placeholder="{{ customer.nom }}" pattern= "[A-Z][a-z]" [(ngModel)]="customer.nom" name="nom" #prenom="ngModel" title="Nom"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Prénom</li>
+                  <li>
+                    <input placeholder= "{{ customer.prenom }}" type= "text" [(ngModel)]="customer.prenom" name="prenom" #adresse1="ngModel" title="Prénom"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Adresse 1</li>
+                  <li>
+                    <input placeholder= "{{ customer.adresse1 }}" type= "text" [(ngModel)]="customer.adresse1" name="adresse1" #adresse1="ngModel" title="Adresse 1"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Adresse 2</li>
+                  <li>
+                    <input placeholder= "{{ customer.adresse2 }}" type= "text" [(ngModel)]="customer.adresse2" name="adrese2" title="Adresse 2" #adresse2="ngModel"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Ville</li>
+                  <li>
+                    <input placeholder= "{{ customer.ville }}" type= "text" [(ngModel)]="customer.ville" name="ville"  #ville="ngModel" title="Ville"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Code postal</li>
+                  <li>
+                    <input placeholder= "{{ customer.codePostal }}" type= "number" [(ngModel)]="customer.codePostal" name="codePostal" #codePostal="ngModel" title="Code postal"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Mail</li>
+                  <li>
+                    <input placeholder= "{{ customer.mail }}" type= "email" [(ngModel)]="customer.mail" name="mail" #mail="ngModel" title="Mail"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Tel (+33)</li>
+                  <li>
+                    <input placeholder= "{{ customer.tel }}" type= "tel" pattern= "^((\+\d{1,3}(-| )?\(?\d\)?(-| )?\d{1,5})|(\(?\d{2,6}\)?))(-| )?(\d{3,4})(-| )?(\d{4})(( x| ext)\d{1,5}){0,1}$" [(ngModel)]="customer.tel" name="tel" #tel="ngModel" title="Téléphone"/>
+                  </li>
+                </ul>
+              </td>
+
+              <td class="td">
+                <ul>
+                  <li>Date de naissance courante</li>
+                  <li>{{ customer.date | slice:0:10}}</li>
+                  <li>Date de naissance</li>
+                  <li *ngIf="sliceAction > 0">
+                    <input type= "date" [(ngModel)]="customer.date" name="date" #date="ngModel" title="Date de naissance"/>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+
+      <button type="submit" mwlConfirmationPopover [popoverTitle]="'Confirmation'" [popoverMessage]="'Êtes-vous sûr?'" placement="top"
+        (confirm)="modifyCustomer(customers.id_client, data)" title="Modifier" class="buttonPink" id="btSubmit">
+        Modifier
+      </button>
+    </form>
+    </ng-template>
+
+</section>

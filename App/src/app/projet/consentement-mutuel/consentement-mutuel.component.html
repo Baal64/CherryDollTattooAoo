@@ -1,0 +1,55 @@
+<section class= "zIndex0">
+  
+    <form
+      name= "infos" #myForm= "ngForm"
+    >
+      <h2>Consentement mutuel et éclairé</h2>
+  
+      <article>
+        <p>Le tatoueur déclare exercer son art dans le respect de la réglementation en vigueur, en matière de sécurité sanitaire par exemple, et utiliser uniquement du matériel à usage unique et stérile. Celui-ci reconnaît être en pleine possession de ses moyens, et s’engage à reproduire le plus fidèlement possible le motif souhaité par le client. On ne peut pas garantir une copie du motif 100% conforme à l'original. Toute modification du motif original sera entendue et convenue entre le tatoueur et son client avant que la séance ne commence.</p>
+        <br/>
+        
+        <p class= "gras">Aucun mineur de moins de 18 ans, ne pourra être tatoué.</p>
+        <br/>
+        
+        <p class= "gras">Par la présente, j’atteste sur l’honneur :</p>
+        <br/>
+
+        <ul>
+          <li class= "li">Être majeur de 18ans.</li>
+          <li class= "li">Savoir que le tatouage est indélébile (dermo-pigmentation à vie).</li>
+          <li class= "li">Être sain d’esprit, et en pleine possession de mes moyens.</li>
+          <li class= "li">Ne pas être sous l’emprise de stupéfiant, de drogue, d’alcool, ou tout autres psychotropes.</li>
+          <li class= "li">N’être atteint d’aucune maladie sanguine (HIV, Hépatite, Diabète, Hémophilie …).</li>
+          <li class= "li">N’être atteint d’aucune déficience cardiaque ou auto-immunitaire.</li>
+          <li class= "li">N’être sous aucun traitement médical quel qu’il soit (cortisone, anti-inflammatoires, etc…).</li>
+          <li class= "li">Ne pas prendre de médicaments susceptibles de fluidifier le sang.</li>
+          <li class= "li">N’être atteint d’aucune allergie (aux encres et pigments, à certaines matières utilisées dans le tatouage ou à certains matériaux comme le chlore, la vaseline, le latex, etc…).</li>
+          <li class= "li">Ne pas être enceinte.</li>
+          <li class= "li">Avoir pris connaissance de tout ce qui précède et que toutes les informations renseignées à mon sujet sont exactes.</li>
+          <li class= "li">De plus je décharge le tatoueur de toutes conséquences dues au tatouage, quelle qu’en soit la nature (malaise, infection, allergie,...) et déclare en assumer l'entière responsabilité.</li>
+          <li class= "li">Je reconnais également avoir pris connaissance des éventuels risques liés au tatouage et à ses conséquences, même exceptionnelles.</li>
+          <li class= "li">Je m’engage en outre à respecter les recommandations du tatoueur afin d’éviter toute infection et de garantir la meilleure cicatrisation possible.</li>
+          <li class= "li">Je déclare avoir pris connaissance des soins et de l’entretien à apporter après l’acte de tatouage.</li>
+          <li class= "li">En signant ce consentement je donne par la même mon accord pour la prise de photos et ou de vidéos de l'acte avant, pendant et après l'intervention ainsi que leur diffusion.</li>
+        </ul>
+        <br/>
+  
+        <p class= "gras">Lors de la prise de votre rendez vous, un acompte de 30% sur le montant total du tatouage vous sera demandé. Cet acompte sera perdu en cas de rendez vous manqué et non signalé avant 48h.</p>
+        
+        <div class= "validation">
+          <input type= "checkbox" #checkBox= "ngModel" [(ngModel)]= "shown" name= "checkBox" class= "cochee" id= "check" (click)= "onDisableComponent()" [disabled]= "disabled"/>
+  
+          <label class= "gras largeur" id= "disableCssColor">En cochant cette case, je déclare avoir lu et compris les informations ci-dessus.</label>
+        </div>
+      </article>
+
+      <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+        <a routerLink= "/suivi-projet/nouveau-projet/informations-soins">Valider et continuer</a>
+      </button>
+            
+      <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+        <a routerLink= "/suivi-projet/nouveau-projet">Valider et arrêter</a>
+      </button>
+    </form>
+  </section>

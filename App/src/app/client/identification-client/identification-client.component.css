@@ -1,0 +1,24 @@
+/* date input style */
+
+#inputDate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+}
+
+#inputDateLabel{
+    margin: 0px 0px -5px 0px;
+    font-weight: 630;
+    color: #999;
+}
+
+/* "identification-client" li style */
+
+li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

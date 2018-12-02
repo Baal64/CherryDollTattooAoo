@@ -1,0 +1,70 @@
+<section class= "zIndex0">
+  
+    <form name= "infos" #myForm= "ngForm">
+      <h2>Tatouage | Informations & soins</h2>
+  
+      <article>
+        <p>Dans les jours qui suivent la réalisation du tatouage, il est NORMAL d'observer une réaction inflammatoire (rougeur et parfois gonflement). Ces symptômes disparaissent en moins d'une semaine. S'ils persistent ou s'accentuent, n'hésitez pas à recontacter votre tatoueur.</p>
+        <br/>
+
+        <p>La cicatrisation définitive est ensuite obtenue dans des délais qui varient en fonction de l’emplacement du tatouage, de votre état général et de vos antécédents médicaux.
+           Le délai moyen de cicatrisation d'un tatouage est de 2 à 3 semaines.</p>
+        <br/>
+
+        <p class= "gras">Pour une bonne cicatrisation de votre tatouage respectez les règles suivantes.</p>
+        <br/>
+
+        <ul>
+          <li class= "li">Toujours se laver les mains avant de toucher le tatouage, même pour simplement le montrer.</li>
+          <li class= "li">Respecter scrupuleusement les conseils de soins.</li>
+          <li class= "li">Ne pas toucher le tatouage en dehors des soins.</li>
+          <li class= "li">Éviter les manipulations brutales, sport de combat, pressions continues et frottements abusifs des vêtements.</li>
+          <li class= "li">Préférez des vêtements amples et en coton (proscrivez la laine et le Nylon).</li>
+          <li class= "li">Éviter de couvrir ou d'enfermer votre tatouage.</li>
+          <li class= "li">Lorsque c'est possible, laissez le à l'air libre.</li>
+          <li class= "li">Strictement interdit : bains, piscine, mer, soleil, U.V., sauna, hammam.</li>
+          <li class= "li">Ne pas utiliser de savons parfumés, déodorant, alcool sur votre nouveau tatouage.</li>
+          <li class= "li">Ne grattez pas votre tatouage : les petites peaux mortes tomberont d'elles-mêmes. Considérez votre tatouage, comme une plaie fragile et longue à cicatriser. La cicatrisation de votre tatouage tient en grande partie au sérieux dans la réalisation de vos soins.</li>
+        </ul>
+        <br/>
+
+        <p class= "gras">Soins préconisés, toujours se laver les mains avant de faire les soins !!!</p>
+        <br/>
+
+        <p class= " gras">1er jour :</p>
+        
+        <ul>
+          <li class= "li">Ôter le pansement 3 heures près la séance de tatouage.</li>
+          <li class= "li">Nettoyer sans frotter le tatouage à l'eau tiède et au savon doux antiseptique (Septivon®, Cytéal®, ou Gamme ITC®).</li>
+          <li class= "li">Sécher sans frotter.</li>
+          <li class= "li">Appliquer une fine couche de crème cicatrisante (Cycatril®, Bepanthen®, CicaBiafine®, Homéoplasmine®, ou Gamme ITC®).</li>
+          <li class= "li">Vous pouvez alors remettre un pansement à garder la première nuit.</li>
+        </ul>
+          <br/>
+
+          <p class= "gras">Les jours suivants :</p>
+
+        <ul>
+          <li class= "li">Nettoyer sans frotter le tatouage à l'eau tiède et au savon doux antiseptique (sous la douche quotidienne).</li>
+          <li class= "li">Sécher sans frotter.</li>
+          <li class= "li">Appliquer 2 à 3 fois par jour la crème cicatrisante en couche fine.</li>
+          <li class= "li">Ne remettez pas de pansement sauf si vous êtes exposé à des travaux salissants.</li>
+          <li class= "li">Ne grattez pas votre tatouage : les petites peaux mortes tomberont d'elles-mêmes.</li>
+        </ul>
+        <br/>
+
+        <p>Pour toute question concernant la cicatrisation et/ou l'aspect de votre tatouage, n'hésitez pas à recontacter votre tatoueur.</p>
+  
+        <div class= "validation">
+  
+          <input type= "checkbox" #checkBox= "ngModel" [(ngModel)]= "shown" name= "checkBox" class= "cochee" id= "check" (click)= "onDisableComponent()" [disabled]= "disabled"/>
+  
+          <label class= "gras largeur" id= "disableCssColor">En cochant cette case, je déclare avoir lu et compris les informations ci-dessus.</label>
+        </div>
+      </article>
+  
+      <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+        <a routerLink= "/suivi-projet/nouveau-projet">Valider</a>
+      </button>
+    </form>
+  </section>

@@ -1,0 +1,389 @@
+<section class="zIndex0">
+
+  <form name="infos" #myForm="ngForm">
+    <h2>Formulaire santé</h2>
+
+    <article>
+      <p class="gras">Veuillez remplir les champs ci-dessous :</p>
+      
+      <!-- Field list -->
+      <ul>
+        <li>
+          <label>Avez-vous pris un ou plusieurs médicaments au cours de ces 6 derniers mois :</label>
+          <ul class="ulOuiNon">
+            <li>
+              <label>Oui</label>
+              <input type="checkbox" class="ouiNon" />
+            </li>
+
+            <li>
+              <label>Non</label>
+              <input type="checkbox" class="ouiNon" />
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label>Si oui, le(s)quel(s)?</label>
+          <input type="text" placeholder="Ex : Ventoline, Doliprane, ..." required />
+        </li>
+
+        <li>
+          <label>Avez-vous pris l’un de ces produits au cours de ces 2 derniers jours:<br />Anti coagulant, Aspirine,
+            Ibuprofène, Naproxen, Alcool ?</label>
+          <ul class="ulOuiNon">
+            <li>
+              <label>Oui</label>
+              <input type="checkbox" class="ouiNon" />
+            </li>
+
+            <li>
+              <label>Non</label>
+              <input type="checkbox" class="ouiNon" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <label>Si oui, le(s)quel(s)?</label>
+          <input type="text" placeholder="Anti coagulant, Aspirine..." />
+        </li>
+        <li>
+          <label>Avez-vous subi une chimiothérapie ou une radiothérapie au cours des 12 derniers mois?</label>
+          <ul class="ulOuiNon">
+            <li>
+              <label>Oui</label>
+              <input type="checkbox" class="ouiNon" />
+            </li>
+
+            <li>
+              <label>Non</label>
+              <input type="checkbox" class="ouiNon" />
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <label>Si oui :</label>
+          <input type="text" placeholder="Nom du médecin" />
+        </li>
+
+        <li>
+          <input type="text" placeholder="Nom du chirurgien" />
+        </li>
+
+        <!-- Allergy -->
+
+        <li>
+          <label>Allergies: Avez-vous déjà eu une réaction allergique à l’une des substances ci-dessous:</label>
+          <ul class="blocMasterRadio">
+            <li class="blocRadio">
+              <input type="radio" value="Lanoline" class="ouiNon" />
+              <label>Lanoline</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Latex" class="ouiNon" />
+              <label>Latex</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Vaseline" class="ouiNon" />
+              <label>Vaseline</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Pansements" class="ouiNon" />
+              <label>Pansements</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Métaux" class="ouiNon" />
+              <label>Métaux</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Médicaments" class="ouiNon" />
+              <label>Médicaments</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Aliments" class="ouiNon" />
+              <label>Aliments</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Lidocaïne" class="ouiNon" />
+              <label>Lidocaïne</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Peinture" class="ouiNon" />
+              <label>Peinture</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Crayons" class="ouiNon" />
+              <label>Crayons</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Glycérine" class="ouiNon" />
+              <label>Glycérine</label>
+            </li>
+
+            <li class="blocRadio">
+              <input type="radio" value="Teinture pour cheveux" class="ouiNon" />
+              <label style="font-size: 0.8em">Teinture cheveux</label>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <label>Anesthésiques ou Adrénaline<br />(préciser lequel)</label>
+          <input type="text" placeholder="Anesthésiques ou Adrénaline" />
+        </li>
+
+        <li>
+          <label>Autres allergies (lister)</label>
+          <input type="text" placeholder="Autres allergies" />
+        </li>
+
+        <!-- Troubles -->
+
+        <li>
+          <label>Êtes vous sujets à un ou plusieurs des divers troubles suivants ? Cochez la/les case(s) concernée(s) :</label>
+          <!-- <ul class= "blocMasterRadio"> -->
+          <ul>
+            <li class="blocRadioWhide">
+              <input type="radio" value="Problème cardiaque" class="ouiNon" />
+              <label>Problème cardiaque</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Diabète" class="ouiNon" />
+              <label>Diabète</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Hémophilie" class="ouiNon" />
+              <label>Hémophilie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Anémie" class="ouiNon" />
+              <label>Anémie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Fièvre rumathoïde" class="ouiNon" />
+              <label>Fièvre rumathoïde</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Problèmes circulatoires" class="ouiNon" />
+              <label>Problèmes circulatoires</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Hypertention" class="ouiNon" />
+              <label>Hypertention</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Hypotention" class="ouiNon" />
+              <label>Hypotention</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Épilepsie" class="ouiNon" />
+              <label>Épilepsie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Évanouissements ou vertiges" class="ouiNon" />
+              <label>Évanouissements ou vertiges</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Problèmes de thyroïde" class="ouiNon" />
+              <label>Problèmes de thyroïde</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Maladie du foie" class="ouiNon" />
+              <label>Maladie du foie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Hépatite" class="ouiNon" />
+              <label>Hépatite</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Maladie des reins" class="ouiNon" />
+              <label>Maladie des reins</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Tumeurs, excroissances ou kystes" class="ouiNon" />
+              <label>Tumeurs, excroissances ou kystes</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="cancer" class="ouiNon" />
+              <label>cancer</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Chimiothérapie" class="ouiNon" />
+              <label>Chimiothérapie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Alopécie" class="ouiNon" />
+              <label>Alopécie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="VIH" class="ouiNon" />
+              <label>VIH</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Palpitations" class="ouiNon" />
+              <label>Palpitations</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Glaucome" class="ouiNon" />
+              <label>Glaucome</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Tuberculose" class="ouiNon" />
+              <label>Tuberculose</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Herpès" class="ouiNon" />
+              <label>Herpès</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Récente perte de cheveux" class="ouiNon" />
+              <label>Récente perte de cheveux</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Psoriasis" class="ouiNon" />
+              <label>Psoriasis</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Infection oculaire en cours" class="ouiNon" />
+              <label>Infection oculaire en cours</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Anti coagulants" class="ouiNon" />
+              <label>Anti coagulants</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Enceinte/allaitement" class="ouiNon" />
+              <label>Enceinte/allaitement</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Lupus" class="ouiNon" />
+              <label>Lupus</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Angiome" class="ouiNon" />
+              <label>Angiome</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Hématomes ou saignements fréquents" class="ouiNon" />
+              <label>Hématomes ou saignements fréquents</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Radiothérapie" class="ouiNon" />
+              <label>Radiothérapie</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Vergetures" class="ouiNon" />
+              <label>Vergetures</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Cicatrisations hypertrophiées" class="ouiNon" />
+              <label>Cicatrisations hypertrophiées</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Problèmes de cicatrisation" class="ouiNon" />
+              <label>Problèmes de cicatrisation</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Épilation au laser au cours des six derniers mois" class="ouiNon" />
+              <label>Épilation au laser au cours des six derniers mois</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Don du sang" class="ouiNon" />
+              <label>Don du sang</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Allergies" class="ouiNon" />
+              <label>Allergies</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Prise de drogue/alcool/médicaments" class="ouiNon" />
+              <label>Prise de drogue/alcool/médicaments</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Projet de chirurgie estéthique" class="ouiNon" />
+              <label>Projet de chirurgie estéthique</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Cortisone au cours des 6 derniers mois" class="ouiNon" />
+              <label>Cortisone au cours des 6 derniers mois</label>
+            </li>
+
+            <li class="blocRadioWhide">
+              <input type="radio" value="Roaccutane au cours des 6 derniers mois" class="ouiNon" />
+              <label>Roaccutane au cours des 6 derniers mois</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- validation checkbox, needed to show validation button -->
+      <div class="validation">
+        <input type="checkbox" #checkBox="ngModel" [(ngModel)]="shown" name="checkBox" id="check" class="cochee"
+          (click)="onDisableComponent()" [disabled]="disabled" />
+        <label class="gras largeur" id="disableCssColor">
+          En cochant cette case, je déclare sur l'honneur que les informations ci-dessus sont exactes.
+        </label>
+      </div>
+    </article>
+
+    <!-- validation buttons -->
+    <button type="submit" class="buttonPink" id="btSubmit" *ngIf="shown">
+      <a routerLink="/suivi-projet/nouveau-projet/consentement">Valider et continuer</a>
+    </button>
+    
+    <button type="submit" class="buttonPink" id="btSubmit" *ngIf="shown">
+      <a routerLink="/suivi-projet/nouveau-projet">Valider et arrêter</a>
+    </button>
+  </form>
+</section>

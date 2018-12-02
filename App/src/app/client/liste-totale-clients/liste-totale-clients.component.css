@@ -1,0 +1,14 @@
+article {
+    max-height: 370px;
+}
+
+@media all and (min-width: 600px) and (min-height: 640px) {
+    article {
+        min-height: 500px;
+        min-width: 100%;
+    }
+
+    section {
+        min-height: 740px;
+    }
+}

@@ -1,0 +1,33 @@
+<section class="zIndex0">
+  <h2>Supprimer un client</h2>
+  <form #ngForm="ngForm">
+    <article>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let customer of customers">
+            <td>{{ customer.id_client }}</td>
+            <td>{{ customer.nom }}</td>
+            <td>{{ customer.prenom }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </article>
+  
+    <fieldset *ngIf="customers">
+      <input placeholder="ID du client à supprimer" [(ngModel)]="customers.id_client" name="id_client"/>
+
+    <button mwlConfirmationPopover [popoverTitle]="'Confirmation'" [popoverMessage]="'Êtes-vous sûr?'" placement="top"
+      class="buttonPink" id="btSubmit" (confirm)="deleteCustomer(customers.id_client)" title="Supprimer" type="submit">
+      Supprimer
+    </button>
+  </fieldset>
+  </form>
+</section>

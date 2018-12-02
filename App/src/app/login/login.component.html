@@ -1,0 +1,27 @@
+<section id= "wrapLogin">
+  <div id= "logo">
+    <img id= "logoTatoo" src= "../../assets/images/Poupee_mini.png" alt= "Poupée Chery Doll">
+    <img id= "titreTatoo" src= "../../assets/images/Texte_Cherry_Doll_Tatoo_mini.png" alt= "Chery Doll Tattoo">
+  </div>
+
+  <form (ngSubmit)= "soumission(fm)" #fm='ngForm' id= "login">
+    <div id= "divInputLogin">
+      <input [(ngModel)]= "user.mailConnexion" id= "username" class= "inputLogin" name= "mailConnexion" type= "email" placeholder= "Identifiant"
+        #idCtrl= "ngModel">
+    </div>
+
+    <div>
+      <input [(ngModel)]= "user.mdpConnexion" id= "password" class= "inputLogin" name= "mdpConnexion" type= "password" placeholder= "Mot de passe">
+    </div>
+
+    <div id= "divBoutonLogin">
+      <button type= "submit" [disabled]= "fm.invalid" id= "btnConnexion" class= "buttonPink">
+      Connexion
+      </button>
+    </div>
+
+    <div id= "lienMdpOublie">
+      <a href= "#">Mot de passe oublié ?</a>
+    </div>
+  </form>
+</section>

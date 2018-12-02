@@ -1,0 +1,30 @@
+<header *ngIf= "auth.user" id= "header" class= "zIndex100">
+  <nav class= "navbar navbar-dark bg-dark">
+    <button type= "button" data-toggle= "collapse" data-target= "#navbarToggleExternalContent" aria-controls= "navbarToggleExternalContent" aria-expanded= "false" aria-label= "Toggle navigation">
+      <i id= "lienLogo" class= "fas fa-bars"></i>
+    </button>
+
+    <h1>{{title}}</h1>
+
+    <a routerLink= "/" title= "Accueil">
+      <i class= "fas fa-sign-out-alt"></i>
+    </a>
+  </nav>
+
+  <div class= "collapse largeurUl" id= "navbarToggleExternalContent">
+      <ul class= "bg-dark">
+        <li data-toggle= "collapse" data-target= "#navbarToggleExternalContent" aria-controls= "navbarToggleExternalContent" aria-expanded= "false" aria-label= "Toggle navigation">
+          <a routerLink= "/suivi-projet" title= "Projets Tatouages" class= "h4">Projets</a>
+        </li>
+        <li data-toggle= "collapse" data-target= "#navbarToggleExternalContent" aria-controls= "navbarToggleExternalContent" aria-expanded= "false" aria-label= "Toggle navigation">
+          <a routerLink= "/suivi-projet/liste-totale-clients" title= "Liste Clients" class= "h4">Clients</a>
+        </li>
+        <li data-toggle= "collapse" data-target= "#navbarToggleExternalContent" aria-controls= "navbarToggleExternalContent" aria-expanded= "false" aria-label= "Toggle navigation">
+          <a routerLink= "/stocks" title= "Stocks" class= "h4">Stocks</a>
+        </li>
+        <li data-toggle= "collapse" data-target= "#navbarToggleExternalContent" aria-controls= "navbarToggleExternalContent" aria-expanded= "false" aria-label= "Toggle navigation">
+          <a routerLink= "/parametres" title= "Paramètres" class= "h4">Paramètres</a>
+        </li>
+      </ul>
+    </div>
+</header>

@@ -1,0 +1,41 @@
+<section class="zIndex0">
+  <h2>Liste des clients</h2>
+
+  <article>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom</th>
+          <th>Prénom</th>
+          <th>Adresse 1</th>
+          <th>Adresse 2</th>
+          <th>Ville</th>
+          <th>Code Postal</th>
+          <th>Mail</th>
+          <th>Tel</th>
+          <th>Date de naissance</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <td>{{ customer.id_client }}</td>
+          <td>{{ customer.nom }}</td>
+          <td>{{ customer.prenom }}</td>
+          <td>{{ customer.adresse1 }}</td>
+          <td>{{ customer.adresse2 }}</td>
+          <td>{{ customer.ville }}</td>
+          <td>{{ customer.codePostal }}</td>
+          <td>{{ customer.mail }}</td>
+          <td>{{ customer.tel }}</td>
+          <td>{{ customer.date |slice:0:10 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </article>
+
+  <button class= "buttonPink"><a routerLink= "/suivi-projet/liste-clients/suppression" class= "h4">Supprimer un client</a></button>
+  <button class= "buttonPink"><a routerLink= "/suivi-projet/liste-clients/modification" class= "h4">Modifier un client</a></button>
+
+</section>

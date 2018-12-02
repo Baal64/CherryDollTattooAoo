@@ -1,0 +1,50 @@
+/* li local sante style */
+
+li {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.ulOuiNon {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* class for the radio dot button */
+
+.ouiNon {
+    width: 15px;
+    height: 15px;
+    margin-top: -5px;
+    margin-right: 5px;
+    box-shadow: none;
+}
+
+.blocMasterRadio {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.blocRadio {
+    width: 140px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.blocRadioWhide {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+

@@ -1,0 +1,101 @@
+<section class= "zIndex0">
+  
+  <form name= "infos" #myForm= "ngForm">
+    <h2>traçablilité</h2>
+
+    <article>
+      <ul>
+        <li>
+          <label>Photo de la zone avant l'acte :</label>
+          <input type= "text"/>
+        </li>
+        <br/>  
+
+        <li>
+          <label>Photo de la zone après l'acte :</label>
+          <input type= "text"/>
+        </li>
+        <br/>  
+
+        <li>
+          <label>Dimensions (en cm) :</label>
+          <Div class= "doubleInput">
+            <input placeholder= "largeur" type= "number" class= "largeurHalf"/>
+            <input placeholder= "hauteur" type= "number" class= "largeurHalf"/>
+          </Div>
+        </li>
+        <br/>
+
+        <li>
+            <label>Zone tatouée :</label>
+            <input type= "text"/>
+          </li>
+          <br/>  
+
+        <li>
+          <label>Nombre de couleurs :</label>
+          <input type= "number"/>
+        </li>
+        <br/>
+
+        <li>
+          <label>Nombre d'aiguilles :</label>
+          <input type= "number"/>
+        </li>
+        <br/>
+
+        <li>
+          <label>Complexité :</label>
+          <input type= "number"/>
+        </li>
+        <br/>
+
+        <li>
+          <label>Temps de tatouage (en minutes) :</label>
+          <input type= "number"/>
+        </li>
+        <br/>
+
+        <li>
+          <label>Prix :</label>
+          <input placeholder= "Prix" type="number" class= "largeurHalf"/>
+        </li>
+        <br/>
+
+        <li>
+          <label>Type de peau :</label>
+          <input type= "text"/>
+        </li>
+        <br/>
+
+        <li>
+          <label>Nom du technicien :</label>
+          <input value="Virgil Ba"/>
+        </li>
+        <br/>
+
+        <li>
+            <label>Date de l'intervention :</label>
+          <input placeholder= "Date" type ="date"/>
+        </li>  
+        <br/>
+<!-- prévoir à la place de l'input la récupération de la signautre -->
+        <li>
+          <input placeholder= "signaure"/>
+        </li>
+        <br/>              
+      </ul>
+
+      <div class= "validation">
+
+        <input type= "checkbox" #checkBox= "ngModel" [(ngModel)]= "shown" name= "checkBox" class= "cochee" id= "check" (click)= "onDisableComponent()" [disabled]= "disabled"/>
+
+        <label class= "gras largeur" id= "disableCssColor">En cochant cette case, j'ai bien vérifié et rempli touts les champs ci-dessus.</label>
+      </div>
+    </article>
+
+    <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+      <a routerLink= "/suivi-client/nouveau-projet">Valider</a>
+    </button>
+  </form>
+</section>

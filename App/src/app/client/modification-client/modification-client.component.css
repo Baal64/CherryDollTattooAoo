@@ -1,0 +1,19 @@
+input{
+    margin-bottom: 10px;
+}
+
+tBody{
+    overflow: scroll;
+}
+
+.td {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.td li{
+    text-align: center;
+    font-weight: bold;
+}

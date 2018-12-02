@@ -1,0 +1,33 @@
+<section class= "zIndex0">
+  <h2>Projet numero : </h2> <!-- Inserer le numero de projet depuis la bdd -->
+  <h3>Nom Prenom </h3> <!-- Inserer le nom et prénom de projet depuis la bdd -->
+
+  <ul>
+    <li> 
+    <li>
+      <button class= "buttonPink"><a routerLink= "/suivi-projet/nouveau-projet/informations"  class= "h4">informations</a></button>
+      <!-- TO DO : If form allready filled grey button -->
+    </li>
+    <li>
+      <button class= "buttonPink"><a routerLink= "/suivi-projet/nouveau-projet/sante" class= "h4">Santé</a></button>
+    </li>
+    <li>
+      <button class= "buttonPink"><a routerLink= "/suivi-projet/nouveau-projet/consentement" class= "h4">Consentement</a></button>
+    </li>
+    <li>
+      <button class= "buttonPink"><a routerLink= "/suivi-projet/nouveau-projet/informations-soins" class= "h4">Informations et soins</a></button>
+    </li>
+  </ul>
+
+  <!-- <button mwlConfirmationPopover [popoverTitle]="'Confirmation'" [popoverMessage]="'êtes-vous sûr?'" placement="top" class= "buttonPink" id= "btSubmit" *ngIf= "shown" (confirm)="createCustomer(customers)" type="submit">
+      Valider
+    </button> -->
+
+    <!-- TO DO : Gray and make buttons unusable after the last step done -->
+    <!-- TO DO : Make a function to hide the "projet terminé" button if all the steps are not validated -->
+  <button class= "buttonPink" id='ProjetTermine' title="Archivage du projet">
+      <a routerLink= "/suivi-client">Terminer le projet</a> 
+      <!-- Leave or remove the button "Terminer le projet"? -->
+  </button>
+
+</section>

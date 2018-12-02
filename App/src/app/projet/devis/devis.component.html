@@ -1,0 +1,86 @@
+<section class= "zIndex0">
+  
+    <form name= "infos" #myForm= "ngForm">
+      <h2>devis de tatouage</h2>
+  
+      <article>
+          <ul>
+              <li>
+                <label>Dimensions (en cm) :</label>
+                <Div class= "doubleInput">
+                  <input placeholder= "largeur" type= "number" class= "largeurHalf"/>
+                  <input placeholder= "hauteur" type= "number" class= "largeurHalf"/>
+                </Div>
+              </li>
+              <br/>
+
+              <li>
+                  <label>Zone à tatouer :</label>
+                  <input type= "text"/>
+                </li>
+                <br/>  
+
+              <li>
+                <label>Nombre de couleurs :</label>
+                <input type= "number"/>
+              </li>
+              <br/>
+
+              <li>
+                <label>Nombre d'aiguilles :</label>
+                <input type= "number"/>
+              </li>
+              <br/>
+  
+              <li>
+                <label>Complexité :</label>
+                <input type= "number"/>
+              </li>
+              <br/>
+
+              <li>
+                <label>Temps de tatouage estimé (en minutes) :</label>
+                <input type= "number"/>
+              </li>
+              <br/>
+
+              <li>
+                <label>Fourchette de prix :</label>
+                <Div class= "doubleInput">
+                  <input placeholder= "Prix mini" class= "largeurHalf" type= "number"/>
+                  <input placeholder= "Prix max" class= "largeurHalf" type= "number"/>
+                </Div>
+              </li>
+              <br/>
+
+              <li>
+                <label>Nom du technicien :</label>
+                <input value="Virgil Ba"/>
+              </li>
+              <br/>
+
+              <li>
+                <input placeholder= "Date" type ="date"/>
+              </li>  
+              <br/>
+
+<!-- Replace the following <li> content with signature -->
+              <li>
+                <input placeholder= "signature"/>
+              </li>
+              <br/>              
+            </ul>
+  
+        <div class= "validation">
+  
+          <input type= "checkbox" #checkBox= "ngModel" [(ngModel)]= "shown" name= "checkBox" class= "cochee" id= "check" (click)= "onDisableComponent()" [disabled]= "disabled"/>
+  
+          <label class= "gras largeur" id= "disableCssColor">En cochant cette case, j'ai bien vérifié et rempli touts les champs ci-dessus.</label>
+        </div>
+      </article>
+  
+      <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+        <a routerLink= "/suivi-client/nouveau-projet">Valider</a>
+      </button>
+    </form>
+  </section>

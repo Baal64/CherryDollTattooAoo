@@ -1,0 +1,33 @@
+<section class="zIndex0">
+  <h2>Renseigner le projet :</h2>
+  <form method="get" autocomplete="off">
+    <ul>
+      <li class="autocomplete">
+        <fieldset>
+          <!-- <input placeholder= "Nom du client" type= "text" pattern= "[A-Z][a-z]" [(ngModel)]="tri" name="trinoms" #nom="ngModel" required/> -->
+          <!-- <input placeholder="Nom du client" list="nom" type="text" pattern="[A-Z][a-z]" name="nom" required [(ngModel)]="customer.nom" (change)="getClientActuel()"/> autocompletion pipie bdd -->
+          <input placeholder="Nom du client" type="text" pattern="[A-Z][a-z]" name="nom" title="Nom du client" required/> 
+          <!-- <datalist id="nom">
+            <option *ngFor="let c of(noms | filtreNom : tri)">{{ c | async }}</option>
+          </datalist> -->
+        </fieldset>
+      </li>
+      <li>
+        <input placeholder="Prénom du client" type="text" pattern="[A-Z][a-z]" name="prenom"  title="Prénom du client" required /> <!-- TO DO : autocompletion pipe database -->
+      </li>
+      <li>
+        <input placeholder="Identification du projet" type="number" title="Identification du projet" required /> <!-- TO DO : autocompletion pipe database -->
+      </li>
+      <!-- TO DO : Consider a drop-down list or a table -->
+      <li>
+        <button class="buttonPink"><a routerLink="/suivi-projet/projet-en-cours/liste" title="Valider" class="h4">Valider</a></button>
+      </li>
+      <!-- TO DO : Maybe put the next 2 buttons on a new page? -->
+      <li>
+        <button class= "buttonPink"><a routerLink= "/suivi-projet/liste-clients" title= "Traçabilité de l'acte" class= "h4">Traçabilité</a></button>
+      </li>
+      <li>
+        <button class= "buttonPink"><a routerLink= "/suivi-projet/liste-clients" title= "Devis, factures" class= "h4">Facturation</a></button>
+      </li>
+    </ul>
+  </form>

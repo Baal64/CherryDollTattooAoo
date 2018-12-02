@@ -1,0 +1,45 @@
+<section class= "zIndex0">
+  
+  <form name= "infos" #myForm= "ngForm"
+  >
+    <h2>Informations</h2>
+
+    <article>
+      <p class= "gras">Veuillez lire attentivement les phrases ci-dessous :</p>
+
+      <ul>
+        <li class= "li">Des interventions de retouche pourraient être nécessaires.</li>
+        <li class= "li">Une période de cicatrisation de 3 à 6 semaines est requise avant une intervention de retouche.</li>
+        <li class= "li">Certaines fois, le pigment peut passer sous la peau.</li>
+        <li class= "li">L’application du tatouage peut être douloureuse.</li>
+        <li class= "li">La couleur des pigments va s’estomper.</li>
+        <li class= "li">Une réaction allergique immédiate ou retardée aux pigments peut se produire. Cependant, cette réaction est extrêmement
+          rare. Un résultat négatif au test d’allergie ne garantit pas que vous ne soyez pas allergique.</li>
+        <li class= "li">Des infections peuvent survenir.</li>
+        <li class= "li">L’intervention entraîne des rougeurs et une tuméfaction. De petits saignements peuvent survenir.</li>
+        <li class= "li">Les interventions de camouflage sont expérimentales par définition. Elles nécessitent des tests d’assortiment de
+          la couleur du pigment à celle de la peau avant l’intervention.</li>
+        <li class= "li">Il existe des méthodes efficaces de dépigmentation.</li>
+        <li class= "li">Si vous devez vous soumettre à une IRM dans les 3 mois qui suivent l’intervention, nous vous conseillons d’en parler
+          d’abord à votre médecin.</li>
+      </ul>
+
+      <p>Ces informations ne sont pas destinées à vous inquiéter, mais à vous informer des risques que vous pourriez courir.</p>
+
+      <div class= "validation">
+
+        <input type="checkbox" #checkBox= "ngModel" [(ngModel)]="shown" name="checkBox" class="cochee" id="check" (click)="onDisableComponent()" [disabled]="disabled"/>
+
+        <label class= "gras largeur" id= "disableCssColor">En cochant cette case, je déclare avoir lu et compris les informations ci-dessus.</label>
+      </div>
+    </article>
+
+    <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+      <a routerLink= "/suivi-projet/nouveau-projet/sante">Valider et continuer</a>
+    </button>
+
+    <button type= "submit" class= "buttonPink" id= "btSubmit" *ngIf= "shown">
+      <a routerLink= "/suivi-projet">Valider et arreter</a>
+    </button>
+  </form>
+</section>

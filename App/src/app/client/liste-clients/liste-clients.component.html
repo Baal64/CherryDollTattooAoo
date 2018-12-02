@@ -1,0 +1,35 @@
+<section class="zIndex0">
+  <article>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <!-- <th>ID</th> -->
+          <th>Nom</th>
+          <th>Prénom</th>
+          <!-- <th>Adresse 1</th> -->
+          <!-- <th>Adresse 2</th> -->
+          <!-- <th>Ville</th> -->
+          <!-- <th>Code Postal</th> -->
+          <!-- <th>Mail</th> -->
+          <!-- <th>Tel</th> -->
+          <!-- <th>Date de naissance</th> -->
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let customer of customers">
+          <!-- <td>{{ customer.id_client }}</td> -->
+          <td>{{ customer.nom }}</td>
+          <td>{{ customer.prenom }}</td>
+          <!-- <td>{{ customer.adresse1 }}</td> -->
+          <!-- <td>{{ customer.adresse2 }}</td> -->
+          <!-- <td>{{ customer.ville }}</td> -->
+          <!-- <td>{{ customer.codePostal }}</td> -->
+          <!-- <td>{{ customer.mail }}</td> -->
+          <!-- <td>{{ customer.tel }}</td> -->
+          <!-- <td>{{ customer.date }}</td> -->
+        </tr>
+      </tbody>
+    </table>
+  </article>
+</section>

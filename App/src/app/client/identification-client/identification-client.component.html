@@ -1,0 +1,68 @@
+<!-- Identification client -->
+
+<section class= "zIndex0">
+    <form name= "infos" #myForm= "ngForm">
+      <h2>
+        Client
+      </h2>
+  
+      <article>
+        <p class= "gras">Veuillez remplir les champs ci-dessous :</p>
+  
+        <ul>
+          <li>
+            <input placeholder= "Nom" type= "text" pattern= "[a-zA-Z]*" [(ngModel)]="customers.nom" name="nom" #nom="ngModel" title="Nom" required/>
+          </li>
+
+          <li>
+            <input placeholder= "Prénom" type= "text" pattern= "[A-Z][a-z]" [(ngModel)]="customers.prenom" name="prenom" #prenom="ngModel" title="Prénom" required/>
+          </li>
+
+          <li>
+            <input placeholder= "Adresse 1" type= "text" [(ngModel)]="customers.adresse1" name="adresse1" #adresse1="ngModel" title="Adresse 1" required/>
+          </li>
+
+          <li>
+            <input placeholder= "Adresse 2" type= "text" [(ngModel)]="customers.adresse2" name="adrese2" title="Adresse 2" #adresse2="ngModel"/>
+          </li>
+
+          <li>
+            <input placeholder= "Ville" type= "text" pattern= "[A-Z][a-z]" [(ngModel)]="customers.ville" name="ville"  #ville="ngModel" title="Ville" required/>
+          </li>
+
+          <li>
+            <input placeholder= "Code postal" type= "number" [(ngModel)]="customers.codePostal" name="codePostal" #codePostal="ngModel" title="Code postal" required/>
+          </li>
+
+          <li>
+            <input placeholder= "Mail" type= "email" [(ngModel)]="customers.mail" name="mail" #mail="ngModel" title="Mail" required/>
+          </li>
+
+          <li>
+            <input placeholder= "Téléphone" type= "number" [(ngModel)]="customers.tel" name="tel" #tel="ngModel" title="Téléphone" required/>
+          </li>
+
+          <li id= "inputDate">
+            <label id= "inputDateLabel">Date de naissance</label>
+            <input type= "date" value= "2000-01-01" [(ngModel)]="customers.date" name="date" #date="ngModel" title="Date de naissance" required/>
+          </li>
+        </ul>
+  
+        <div class= "validation">
+          <input type= "checkbox" #checkBox= "ngModel" [(ngModel)]= "shown" name= "checkBox" id= "check" class= "cochee" (click)= "onDisableComponent()" title=" Valider" [disabled]= "disabled"/>
+  
+          <label class= "gras largeur" id= "disableCssColor">
+            En cochant cette case, je déclare sur l'honneur que les informations ci-dessus sont exactes.
+          </label>
+        </div>
+      </article>
+
+      <button mwlConfirmationPopover [popoverTitle]="'Confirmation'" [popoverMessage]="'êtes-vous sûr?'" placement="top" class= "buttonPink" id= "btSubmit" *ngIf= "shown" (confirm)="createCustomerContinue(customers)" title=" Valider et continuer" type="submit">
+        Valider et continuer
+     </button>
+     
+      <button mwlConfirmationPopover [popoverTitle]="'Confirmation'" [popoverMessage]="'êtes-vous sûr?'" placement="top" class= "buttonPink" id= "btSubmit" *ngIf= "shown" (confirm)="createCustomer(customers)" type="submit" title ="Valider et arrêter">
+         Valider et arrêter
+      </button>
+    </form>
+  </section>

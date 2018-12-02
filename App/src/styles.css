@@ -1,0 +1,307 @@
+/* The style is a mobile first design */
+
+/* Imporation of the toastr style*/
+
+@import "~ngx-toastr/toastr.css";
+
+/* Initialise global style */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Globals blocs styles */
+
+html {
+    height:100vh;
+    min-height: 640px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 640px;
+    background-image:linear-gradient(#fff, #e5d4dd);
+}
+
+article {
+    background-color: #fff;
+    position: relative;
+    margin: 10px 15px 30px 15px;
+    margin-bottom: 15px;
+    padding: 5px 10px;
+    overflow-y: auto;
+    height: 400px;
+    width:330px;
+    box-shadow: 0px 1px 7px 3px rgba(78, 78, 78, 0.205) inset;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 596px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content:center;
+    align-items: center;
+
+}
+
+/* Z position between the header and the others components */
+
+.zIndex0 {
+    position: absolute;
+    top: 44px;
+    z-index: 0;
+}
+
+.zIndex100 {
+    z-index: 100;
+    position:relative;
+}
+
+/* Titles style of the components */
+
+h2 {
+    font-size:1.4em;
+    text-align: center;
+    margin: 10px auto;
+    color: #999;
+    font-weight: 650;
+}
+
+/* Global ul and li style */
+
+ul {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+li {
+    list-style-type:none;
+    width: 100%;
+}
+
+/* li dots list style */
+
+.li {
+    margin-bottom: 5px;
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+/* Validation pink buttons style */
+
+.buttonPink {
+    display: flex;
+    justify-content: center;
+    border: none;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    height: 40px;
+    width: 250px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    background-color: #e4007b;
+    color: #fff;
+    box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.buttonPink:hover {
+    background-color: #fc90ac;
+}
+
+.buttonPink:active {
+    background-color: #ffd2e5;
+}
+
+.h4:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+.h4:active {
+    color: #999;
+}
+
+/* forms inside green buttons style */
+
+.buttonGrey {
+    display: flex;
+    justify-content: center;
+    border: none;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 500;
+    height: 40px;
+    width: 250px;
+    margin-top: 5px;
+    border-radius: 6px;
+    background-color: #999;
+    color: #fff;
+    box-shadow: 0px 1px 10px 3px rgba(0, 0, 0, 0.2); 
+}
+
+.buttonGrey:hover {
+    background-color: #ccc;
+}
+
+.buttonGrey:active {
+    background-color: #f2f2f2;
+}
+
+/* Disabled style for checked boxes */
+
+.disabled {
+    opacity: 0.33;
+}
+
+/* Style for li class inside a p bloc */
+
+p, .li {
+    font-size: 1em;
+    text-align: justify;
+    margin-bottom: 0px;
+}
+
+/* style for bold the text */
+
+.gras {
+    font-weight:bold;
+    display: block;
+    text-align: left;
+    color: #999;
+    margin-bottom: 5px;
+}
+
+/* Just a full width style */
+.largeur {
+    width: 100%;
+}
+
+/* Half width size*/
+
+.largeurHalf {
+    width: 40%;
+}
+
+.doubleInput {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Validations div style */
+
+.validation {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px solid rgb(211, 211, 211);
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+/* Input global style */
+
+input {
+    border: none;
+    box-shadow: 0px 1px 7px 3px rgba(78, 78, 78, 0.205) inset;
+    text-align: center;
+    font-size: 18px;
+    height: 40px;
+    width: 250px;
+    margin: 6px 0px 0px 0px;
+    border-radius: 6px;
+    font-weight: 500;  
+}
+
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #b3b3b3;
+  }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: #b3b3b3;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: #b3b3b3;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #b3b3b3;
+  }
+
+/* Style for Checkboxe validation*/
+
+#check {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+    box-shadow: none;
+}
+
+/*-------------------------- Page Login & Erreur 404 -----------------------*/
+#logo {
+    height: 30vh;
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items:center;
+}
+
+#logoTatoo {
+    height: 305px;
+    z-index: 10;
+    margin-bottom: -60px;
+}
+
+#titreTatoo {
+    height: 150px;
+    z-index: 1;  
+}
+
+#login {
+    position: absolute;
+    margin-bottom:35px;
+    bottom: 0px;
+    align-items: center;
+}
+
+/* Media queries for responsive style adaptive for computers screens*/
+
+@media all and (min-width: 600px) and (min-height: 640px) {
+    article {
+        height: 500px;
+        width: 600px;
+    }
+
+    h1 {
+        font-size:2em;
+    }
+
+    nav {
+        height: 60px;
+    }
+
+    .zIndex0 {
+        top: 60px;
+    }
+
+    /*-------------------------- Page Login & Erreur 404 -----------------------*/
+    #wrapLogin{
+        position:absolute;
+        top: 50px;
+        height: 650px;
+    }
+}
+
